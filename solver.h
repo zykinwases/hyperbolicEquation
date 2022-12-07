@@ -11,9 +11,6 @@ private:
     double hx, hy, hz;
     double tau, alpha;
 
-    // u[t].getDot(i,j,k)
-    std::vector<double *> u;
-
     int getIndex(int x, int y, int z) {
         return x + y*(N+1) + z*(N+1)*(N+1);
     };

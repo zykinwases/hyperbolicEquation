@@ -306,7 +306,6 @@ double OmpMpiSolver::solve(int steps) {
         error = find_error(u[t], t);
         MPI_Reduce(&error, &maxError, 1, MPI_DOUBLE, MPI_MAX, 0, comminucator);
         if (!rank) std::cout << maxError << std::endl;
-        MPI_Barrier(comminucator);
     }
     
     return maxError;

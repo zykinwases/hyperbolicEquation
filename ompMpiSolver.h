@@ -13,9 +13,6 @@ private:
     double tau, alpha;
     int initialized = 0;
 
-    // u[t].getDot(i,j,k)
-    std::vector<double *> u;
-
     MPI_Comm comminucator;
     int rank, size;
     int procCoords[3];
