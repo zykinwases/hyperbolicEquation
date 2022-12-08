@@ -23,7 +23,7 @@ private:
     int dims[3] = {0,0,0};
 
     int getIndex(int x, int y, int z) {
-        return x + y*(xSize) + z*(xSize)*(ySize);
+        return (x*(ySize) + y)*zSize + z;
     };
     void fill_borders(double *u_t, int t);
 

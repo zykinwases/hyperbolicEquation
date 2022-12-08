@@ -12,7 +12,7 @@ private:
     double tau, alpha;
 
     int getIndex(int x, int y, int z) {
-        return x + y*(N+1) + z*(N+1)*(N+1);
+        return (x*(N+1) + y)*(N+1) + z;
     };
     void fill_borders(double *u_t, int t);
 
